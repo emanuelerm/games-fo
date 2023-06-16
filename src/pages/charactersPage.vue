@@ -1,5 +1,7 @@
 <template>
-  <h1></h1>
+  <ul>
+    <li v-for="character in characters">{{ character.name }}</li>
+  </ul>
 </template>
 
 <script>
@@ -16,13 +18,14 @@ export default {
   },
   methods: {
     getData() {
-      axios.get("http://127.0.0.1:8000/api/characters").then((res) => {
-        this.characters = res.data.result.data;
+      console.log("ciao");
+      axios.get(`${this.apiUrl}/characters`).then((res) => {
+        this.characters = res.data.results.data;
       });
     },
-    mounted() {
-      this.getData();
-    },
+  },
+  mounted() {
+    this.getData();
   },
 };
 </script>
