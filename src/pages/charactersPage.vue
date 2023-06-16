@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <h1></h1>
 </template>
 
 <script>
@@ -11,12 +11,12 @@ export default {
       characters: [],
       activePage: 1,
       apiEndpoint: "/character?page=",
-      apiUrl: "http://127.0.0.1:8000/api/",
+      apiUrl: "http://127.0.0.1:8000/api",
     };
   },
   methods: {
     getData() {
-      axios.get(`${this.apiUrl}characters`).then((res) => {
+      axios.get("http://127.0.0.1:8000/api/characters").then((res) => {
         this.characters = res.data.result.data;
       });
     },
