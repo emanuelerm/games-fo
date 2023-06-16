@@ -11,16 +11,14 @@ export default {
       characters: [],
       activePage: 1,
       apiEndpoint: "/character?page=",
-      apiUrl: "http://127.0.0.1:8000/api",
+      apiUrl: "http://127.0.0.1:8000/api/",
     };
   },
   methods: {
     getData() {
-      axios
-        .get(`${this.apiUrl}+${this.apiEndpoint} + ${this.activePage}`)
-        .then((res) => {
-          (this.characters = res.data.result.data), console.log(res);
-        });
+      axios.get(`${this.apiUrl}characters`).then((res) => {
+        this.characters = res.data.result.data;
+      });
     },
     mounted() {
       this.getData();
