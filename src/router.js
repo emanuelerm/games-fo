@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import LandingPage from "./pages/LandingPage.vue";
-import charactersPage from "./pages/charactersPage.vue"
+import CharactersPage from "./pages/CharactersPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,9 +13,9 @@ const router = createRouter({
     },
     {
       path: "/characters",
-      name: "charactes",
-      component: charactersPage,
-    }
+      name: "characters",
+      component: CharactersPage,
+    },
   ],
 });
 
