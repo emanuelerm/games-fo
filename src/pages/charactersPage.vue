@@ -1,11 +1,17 @@
 <template>
-  <div></div>
+  <AppHeader/>
+  <AppFooter/>
 </template>
 
 <script>
 import axios from "axios";
+import AppHeader from '../../components/AppHeader.vue';
+import AppFooter from '../../components/AppFooter.vue';
 export default {
   name: "charactersPage",
+  components: {
+    AppHeader, AppFooter
+  },
   data() {
     return {
       characters: [],
