@@ -1,29 +1,31 @@
 <template>
 	<AppHeader />
 	<main class="d-flex align-items-center my-3">
-		<div class="container scroll d-flex gap-5">
-			<div class="row gap-2">
+		<div class="container scroll d-flex ">
+			<div class="row gap-5 justify-content-center">
 				<div v-for="character in characters" class="card text-center">
 					<div class="rotate_item">
 						<div class="card-img">
 							<img :src="character.image" alt="{{ character.name }}" />
 						</div>
 						<div class="card-title">
-							<h5 class="m-0 truncate infoContainer text-capitalize">{{ character.name }}</h5>
+							<h2 class="m-0 truncate infoContainer text-capitalize">
+								{{ character.name }}</h2>
 						</div>
 						<div class="infoContainer">
 							<p>
-								{{ character.description }}
-							</p>
-							<p>
+								<span class="fw-2 text-uppercase fw-bold">difficoulty:</span> <br>
 								{{ character.difficoulty }}
 							</p>
 							<p>
+								<span class="fw-2 text-uppercase fw-bold">role:</span> <br>
 								{{ character.role }}
 							</p>
 							<p>
-								{{ character.derivation }}
+								<span class="fw-2 text-uppercase fw-bold">description:</span> <br>
+								{{ character.description }}
 							</p>
+
 						</div>
 					</div>
 				</div>
@@ -65,19 +67,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.row{
+	flex-wrap: wrap;
+}
+
 .card {
 	border: 0;
-	width: 280px;
-	height: 450px;
+	width: calc(100% / 3);
+	height: 550px;
 	overflow: hidden;
-	padding: 0;
+	padding: 3%;
 	position: relative;
-
+	z-index: 1;
+	&:hover {
+		overflow: visible;
+		height: 650px;
+	}
 	&:hover .rotate_item{
+		height: 550px;
 		color: white;
+		padding: 10px;
 		background-color: #90a19d;
 		transform: rotatey(180deg);
 		transition: 1.3s;
+		z-index: 4;
 
 		.infoContainer {
 			transform: rotatey(180deg);

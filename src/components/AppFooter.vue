@@ -20,6 +20,7 @@
         color: white;
         position: fixed;
         bottom: 0;
+        z-index: 1000;
     }
 
     .H{
