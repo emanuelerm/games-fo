@@ -36,6 +36,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+header{
+    position: fixed;
+    top:0px;
+    z-index: 999;
+}
 .pe-200 {
   padding-right: 200px;
 }

@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .row{
 	flex-wrap: wrap;
 }
@@ -89,7 +90,7 @@ export default {
 		padding: 10px;
 		background-color: #90a19d;
 		transform: rotatey(180deg);
-		transition: 1.3s;
+		transition: 1.6s;
 		z-index: 4;
 
 		.infoContainer {
