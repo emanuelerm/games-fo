@@ -67,7 +67,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+main{
+	padding-top: 150px;
+}
 .row{
 	flex-wrap: wrap;
 }
